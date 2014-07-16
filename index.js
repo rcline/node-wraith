@@ -13,7 +13,7 @@ function run(configFile) {
 		outputFolder = '',
 		baseFolder = process.cwd() + '/';
 
-	var config = require(baseFolder + 'config/' + configFile + '.json');
+	var config = require(baseFolder + configFile);
 
 	outputFolder = typeof config.outputDir === 'undefined' ? baseFolder + 'shots/' : baseFolder + 'shots/' + config.outputDir;
 
