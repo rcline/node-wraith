@@ -20,11 +20,13 @@ Based on the Ruby version available at [http://github.com/BBC-News/wraith](http:
 	--v, --version	Output version information
 
 	Examples:
-	wraith --config chrome
+	wraith --config ./config/chrome.json
 
 ### Configuration file
 
-Wraith uses a json based configuration file that allows you specfify a large number of options. You can create as many configurations files as you need and call them from the cli using the --config flag. All congiguration files must be stored within the config folder.
+Wraith uses a json based configuration file that allows you specfify a large number of options. You can create as many configurations files as you need and call them from the cli using the --config flag. These configuration files can live anywhere that is addressable by a local path and they are passed as an argument like this:
+
+    wraith --config ./path/to/my_config.json
 
 Below is an example configuration file:
 
