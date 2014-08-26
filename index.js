@@ -18,7 +18,6 @@ function run(configFile) {
 
 
 	outputFolder = path.join(baseFolder, config.outputDir || 'shots/');
-	console.log('$$$$5', outputFolder, baseFolder, config.outputDir)
 	for(var domain in config.domains) {
 		domains.push(config.domains[domain].replace(/\/+$/, ''));
 		domainLabels.push(domain);
