@@ -1,25 +1,21 @@
 {
 	"project": "Test",
 	"domains": {
-		"bbc.co.uk": "http://www.bbc.co.uk",
-		"live.bbc.co.uk": "http://www.live.bbc.co.uk"
+		"usa": "http://www.google.com",
+		"canada": "http://www.google.ca"
 	},
 	"engines" : [
 		"phantomjs"
 	],
 	"sizes": [
-		"320",
 		"768",
 		"1440"
 	],
 	"paths": [
 		"/",
-		"/news",
-		"/weather",
-		"/tv",
-		"/aboutthebbc"
+		"/404"
 	],
-	"outputDir": "bbc",
+	"outputDir": "test",
 	"fuzz": "20%",
 	"maxConnections": 20
 }
