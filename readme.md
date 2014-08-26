@@ -24,7 +24,7 @@ Based on the Ruby version available at [http://github.com/BBC-News/wraith](http:
 
 ### Configuration file
 
-Wraith uses a json based configuration file that allows you specfify a large number of options. You can create as many configurations files as you need and call them from the cli using the --config flag. These configuration files can live anywhere that is addressable by a local path and they are passed as an argument like this:
+Wraith uses a json based configuration file that allows you specify a large number of options. You can create as many configurations files as you need and call them from the cli using the --config flag. These configuration files can live anywhere that is addressable by a local path and they are passed as an argument like this:
 
     wraith --config ./path/to/my_config.json
 
@@ -51,7 +51,7 @@ Below is an example configuration file:
 			"1440"
 		],
 
-		"outputDir": "test/chrome/", (Output directory within the /shots directory)
+		"outputDir": "test/chrome/", (defaults to "shots")
 
 		You can choose to specfiy a list of paths to be used or you can crawl the site. If paths are provided they will take precident and the spider file will be ignored.
 
@@ -70,6 +70,9 @@ Below is an example configuration file:
 		"fuzz": "20%", (Adjusts the sensitivity of the image comparison)
 		"maxConnections": 20 (Limit the amount of concurrent processes)
 	}
+
+## External Dependencies
+Wraith requires [phantomjs](http://phantomjs.org/) & [imagemagick](http://www.imagemagick.org/) to be installed. On OS X this can easily be done with `npm install phantomjs` and `brew install imagemagick`.
 
 ## License
 

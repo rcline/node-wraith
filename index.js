@@ -2,7 +2,8 @@
 
 var fs = require('fs'),
 	wraith = require('./lib/wraith'),
-	spider = require('./lib/spider');
+	spider = require('./lib/spider'),
+	path = require('path');
 
 module.exports.run = run;
 
@@ -15,7 +16,7 @@ function run(configFile) {
 
 	var config = require(baseFolder + configFile);
 
-	outputFolder = typeof config.outputDir === 'undefined' ? baseFolder + 'shots/' : baseFolder + 'shots/' + config.outputDir;
+	outputFolder = path.join(baseFolder, config.outputDir || 'shots/');
 
 	for(var domain in config.domains) {
 		domains.push(config.domains[domain].replace(/\/+$/, ''));
