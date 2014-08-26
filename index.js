@@ -14,10 +14,11 @@ function run(configFile) {
 		outputFolder = '',
 		baseFolder = process.cwd() + '/';
 
-	var config = require(baseFolder + configFile);
+	var config = require(path.join(baseFolder, configFile));
+
 
 	outputFolder = path.join(baseFolder, config.outputDir || 'shots/');
-
+	console.log('$$$$5', outputFolder, baseFolder, config.outputDir)
 	for(var domain in config.domains) {
 		domains.push(config.domains[domain].replace(/\/+$/, ''));
 		domainLabels.push(domain);
