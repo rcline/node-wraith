@@ -71,6 +71,9 @@ Below is an example configuration file:
 		"maxConnections": 20 (Limit the amount of concurrent processes)
 	}
 
+## External Dependencies
+Wraith requires [phantomjs](http://phantomjs.org/) & [imagemagick](http://www.imagemagick.org/) to be installed. On OS X this can easily be done with `npm install phantomjs` and `brew install imagemagick`.
+
 ## License
 
 MIT © [James Bell](http://james-bell.co.uk)
