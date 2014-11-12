@@ -24,7 +24,7 @@ function run(configFile) {
 		return false;
 	}
 
-	outputFolder = typeof config.outputDir === 'undefined' ? baseFolder + 'shots/' : baseFolder + 'shots/' + config.outputDir;
+	outputFolder = typeof config.outputDir === 'undefined' ? baseFolder + 'shots/' : baseFolder + 'shots/' + config.outputDir + '/';
 	outputFolder = path.normalize(outputFolder);
 
 	for(var domain in config.domains) {
