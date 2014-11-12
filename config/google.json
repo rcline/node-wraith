@@ -1,0 +1,21 @@
+{
+    "project": "Google Test",
+    "domains": {
+        "usa": "http://www.google.com",
+        "canada": "http://www.google.ca"
+    },
+    "engines": [
+        "phantomjs"
+    ],
+    "sizes": [
+        "768",
+        "1440"
+    ],
+    "outputDir": "test",
+    "paths": [
+        "/",
+        "/404"
+    ],
+    "fuzz": "20%",
+    "maxConnections": 20
+}

@@ -1,0 +1,47 @@
+{
+    "#": "(Optional name for the project, if supplied it will be used within the generated gallery only)",
+    "project": "Test",
+
+    "#": "Specify one or two domains",
+    "domains": {
+        "bbb.co.uk": "http://www.bbc.co.uk",
+        "live.bbc.co.uk": "http://live.bbc.co.uk"
+    },
+
+    "#": "Engines supported are phantomjs, slimerjs and triflejs but in theory any phantomjs based headless browser can be supported via a custom snap.js file",
+    "engines": [
+        "phantomjs"
+    ],
+
+    "#": "Specify as many sizes as you wish",
+    "sizes": [
+        "320",
+        "768",
+        "1440"
+    ],
+
+    "#": "(Defaults to 'shots' directory)",
+    "outputDir": "test/chrome/",
+
+    "#": "You can choose to specify a list of paths to be used or you can crawl the site. If paths are provided they will take precedent and the spider file will be ignored.",
+    "paths": [
+        "/",
+        "/news/",
+        "/news/local/",
+        "/news/england/york_and_north_yorkshire/",
+        "/weather/"
+    ],
+
+    "#": "If no paths are specified then a site crawl will take place and the results will be save in the location specified within this option",
+    "#": "(Specify which file should be used for the spider txt file)",
+    "spider": "spider/test.txt",
+
+    "#": "(Specify snap.js which is used to take the screenshots. Defaults to 'snap.js')",
+    "snap": "snap/test/chrome.js",
+
+    "#": "(Adjusts the sensitivity of the image comparison)",
+    "fuzz": "20%",
+
+    "#": "(Limit the amount of concurrent processes)",
+    "maxConnections": 20
+}

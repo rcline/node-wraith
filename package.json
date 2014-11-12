@@ -1,68 +1,68 @@
 {
-  "name": "wraith",
-  "version": "1.0.1",
-  "description": "A responsive screenshot comparison tool. Based on the Ruby version available at http://github.comm/BBC-News/wraith",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/thebyrd/node-wraith"
-  },
-  "bin": {
-    "wraith": "cli.js"
-  },
-  "author": {
-    "name": "James Bell",
-    "email": "james@james-bell.co.uk",
-    "url": "http://james-bell.co.uk"
-  },
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "scripts": {},
-  "files": [
-    "index.js",
-    "cli.js",
-    "lib/*",
-    "gallery.html",
-    "snap.js"
-  ],
-  "keywords": [
-    "page",
-    "website",
-    "site",
-    "web",
-    "url",
-    "resolution",
-    "size",
-    "screenshot",
-    "screen",
-    "responsive",
-    "cli",
-    "wraith",
-    "phantomjs",
-    "triflejs",
-    "slimerjs"
-  ],
-  "dependencies": {
-    "chalk": "~0.4.0",
-    "nopt": "~2.1.2",
-    "crawl": "~0.3.1",
-    "async": "~0.2.10",
-    "mkdirp": "~0.3.5",
-    "mustache": "~0.8.1",
-    "rimraf": "~2.2.6"
-  },
-  "devDependencies": {},
-  "readme": "# Wraith\nA responsive screenshot comparison tool.\nBased on the Ruby version available at [http://github.com/BBC-News/wraith](http://github.com/BBC-News/wraith)\n\n## CLI app\n\n### Install\n\n```\n\tnpm install --global wraith\n```\n\n###Usage\n\n\tUsage:\n\twraith --config <config>\n\n\tOptions:\n\t-h, --help\t\tOutput help information\n\t--v, --version\tOutput version information\n\n\tExamples:\n\twraith --config ./config/chrome.json\n\n### Configuration file\n\nWraith uses a json based configuration file that allows you specify a large number of options. You can create as many configurations files as you need and call them from the cli using the --config flag. These configuration files can live anywhere that is addressable by a local path and they are passed as an argument like this:\n\n    wraith --config ./path/to/my_config.json\n\nBelow is an example configuration file:\n\n\t{\n\t\t\"project\": \"Test\", (Optional name for the project, if supplied it will be used within the generated gallery only)\n\n\t\tSpecify one or two domains\n\t\t\"domains\": {\n\t\t\t\"bbb.co.uk\": \"http://www.bbc.co.uk\",\n\t\t\t\"live.bbc.co.uk\": \"http://live.bbc.co.uk\"\n\t\t},\n\n\t\tEngines supported are phantomjs, slimerjs and triflejs but in theory any phantomjs based headless browser can be supported via a custom snap.js file\n\t\t\"engines\" : [\n\t\t\t\"phantomjs\"\n\t\t],\n\n\t\tSpecify as many sizes as you wish\n\t\t\"sizes\": [\n\t\t\t\"320\",\n\t\t\t\"768\",\n\t\t\t\"1440\"\n\t\t],\n\n\t\t\"outputDir\": \"test/chrome/\", (defaults to \"shots\")\n\n\t\tYou can choose to specfiy a list of paths to be used or you can crawl the site. If paths are provided they will take precident and the spider file will be ignored.\n\n\t\t\"paths\": [\n\t\t\t\"/\",\n\t\t\t\"/news/\",\n\t\t\t\"/news/local/\",\n\t\t\t\"/news/england/york_and_north_yorkshire/\",\n\t\t\t\"/weather/\"\n\t\t],\n\n\t\tIf no paths are specified then a site crawl will take place and the results will be save in the location specified within this option\n\t\t\"spider\": \"spider/test.txt\", (Specify which file should be used for the spider txt file)\n\n\t\t\"snap\": \"snap/test/chrome.js\", (Specify snap.js which is used to take the screenshots)\n\t\t\"fuzz\": \"20%\", (Adjusts the sensitivity of the image comparison)\n\t\t\"maxConnections\": 20 (Limit the amount of concurrent processes)\n\t}\n\n## External Dependencies\nWraith requires [phantomjs](http://phantomjs.org/) & [imagemagick](http://www.imagemagick.org/) to be installed. On OS X this can easily be done with `npm install phantomjs` and `brew install imagemagick`.\n\n## License\n\nMIT © [James Bell](http://james-bell.co.uk)\n",
-  "readmeFilename": "readme.md",
-  "bugs": {
-    "url": "https://github.com/thebyrd/node-wraith/issues"
-  },
-  "homepage": "https://github.com/thebyrd/node-wraith",
-  "_id": "wraith@1.0.1",
-  "dist": {
-    "shasum": "6fe7dcbc35f8d4e3d5df72d796dd500ae8a84591"
-  },
-  "_resolved": "git+https://github.com/thebyrd/node-wraith.git#96e70c3c85256859c240b99ffa648ddfec8870c1",
-  "_from": "wraith@git+https://github.com/thebyrd/node-wraith.git#master"
+    "name": "wraith",
+    "version": "1.0.2",
+    "description": "A responsive screenshot comparison tool. Based on the Ruby version available at http://github.comm/BBC-News/wraith",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/rcline/node-wraith"
+    },
+    "bin": {
+        "wraith": "cli.js"
+    },
+    "author": {
+        "name": "James Bell",
+        "email": "james@james-bell.co.uk",
+        "url": "http://james-bell.co.uk"
+    },
+    "engines": {
+        "node": ">=0.10.0"
+    },
+    "scripts": {},
+    "files": [
+        "index.js",
+        "cli.js",
+        "lib/*",
+        "gallery.html",
+        "snap.js"
+    ],
+    "keywords": [
+        "page",
+        "website",
+        "site",
+        "web",
+        "url",
+        "resolution",
+        "size",
+        "screenshot",
+        "screen",
+        "responsive",
+        "cli",
+        "wraith",
+        "phantomjs",
+        "triflejs",
+        "slimerjs"
+    ],
+    "dependencies": {
+        "chalk": "~0.4.0",
+        "nopt": "~2.1.2",
+        "crawl": "~0.3.1",
+        "async": "~0.2.10",
+        "mkdirp": "~0.3.5",
+        "mustache": "~0.8.1",
+        "rimraf": "~2.2.6"
+    },
+    "devDependencies": {},
+    "readme": "# Wraith\nA responsive screenshot comparison tool.\nBased on the Ruby version available at [http://github.com/BBC-News/wraith](http://github.com/BBC-News/wraith)\n\n## CLI app\n\n### Install\n\n```\n\tnpm install --global wraith\n```\n\n###Usage\n\n\tUsage:\n\twraith --config <config>\n\n\tOptions:\n\t-h, --help\t\tOutput help information\n\t--v, --version\tOutput version information\n\n\tExamples:\n\twraith --config ./config/chrome.json\n\n### Configuration file\n\nWraith uses a json based configuration file that allows you specify a large number of options. You can create as many configurations files as you need and call them from the cli using the --config flag. These configuration files can live anywhere that is addressable by a local path and they are passed as an argument like this:\n\n    wraith --config ./path/to/my_config.json\n\nBelow is an example configuration file:\n\n\t{\n\t\t\"project\": \"Test\", (Optional name for the project, if supplied it will be used within the generated gallery only)\n\n\t\tSpecify one or two domains\n\t\t\"domains\": {\n\t\t\t\"bbb.co.uk\": \"http://www.bbc.co.uk\",\n\t\t\t\"live.bbc.co.uk\": \"http://live.bbc.co.uk\"\n\t\t},\n\n\t\tEngines supported are phantomjs, slimerjs and triflejs but in theory any phantomjs based headless browser can be supported via a custom snap.js file\n\t\t\"engines\" : [\n\t\t\t\"phantomjs\"\n\t\t],\n\n\t\tSpecify as many sizes as you wish\n\t\t\"sizes\": [\n\t\t\t\"320\",\n\t\t\t\"768\",\n\t\t\t\"1440\"\n\t\t],\n\n\t\t\"outputDir\": \"test/chrome/\", (defaults to \"shots\")\n\n\t\tYou can choose to specfiy a list of paths to be used or you can crawl the site. If paths are provided they will take precident and the spider file will be ignored.\n\n\t\t\"paths\": [\n\t\t\t\"/\",\n\t\t\t\"/news/\",\n\t\t\t\"/news/local/\",\n\t\t\t\"/news/england/york_and_north_yorkshire/\",\n\t\t\t\"/weather/\"\n\t\t],\n\n\t\tIf no paths are specified then a site crawl will take place and the results will be save in the location specified within this option\n\t\t\"spider\": \"spider/test.txt\", (Specify which file should be used for the spider txt file)\n\n\t\t\"snap\": \"snap/test/chrome.js\", (Specify snap.js which is used to take the screenshots)\n\t\t\"fuzz\": \"20%\", (Adjusts the sensitivity of the image comparison)\n\t\t\"maxConnections\": 20 (Limit the amount of concurrent processes)\n\t}\n\n## External Dependencies\nWraith requires [phantomjs](http://phantomjs.org/) & [imagemagick](http://www.imagemagick.org/) to be installed. On OS X this can easily be done with `npm install phantomjs` and `brew install imagemagick`.\n\n## License\n\nMIT © [James Bell](http://james-bell.co.uk)\n",
+    "readmeFilename": "readme.md",
+    "bugs": {
+        "url": "https://github.com/rcline/node-wraith/issues"
+    },
+    "homepage": "https://github.com/rcline/node-wraith",
+    "_id": "wraith@1.0.2",
+    "dist": {
+        "shasum": "6fe7dcbc35f8d4e3d5df72d796dd500ae8a84591"
+    },
+    "_resolved": "git+https://github.com/rcline/node-wraith.git#96e70c3c85256859c240b99ffa648ddfec8870c1",
+    "_from": "wraith@git+https://github.com/rcline/node-wraith.git#master"
 }

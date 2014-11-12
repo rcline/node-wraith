@@ -1,0 +1,16 @@
+{
+    "project": "",
+    "engines": [
+        "phantomjs"
+    ],
+    "sizes": [
+        "720"
+    ],
+    "outputDir": "shots/",
+    "paths": [
+        "/"
+    ],
+    "snap": "snap.js",
+    "fuzz": "20%",
+    "maxConnections": 20
+}
